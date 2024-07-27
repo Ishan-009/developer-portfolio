@@ -3,7 +3,7 @@ function HeaderSocials() {
     <div className="home__socials">
       <a
         target="_blank"
-        href="www.linkedin.com/in/ishan-moorjmalani"
+        href="https://linkedin.com/in/ishan-moorjmalani"
         className="home__socials-links"
       >
         <i className="fa-brands fa-linkedin"></i>

@@ -1,0 +1,139 @@
+.work__filters {
+  display: flex;
+  align-items: center;
+  column-gap: 1.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.work__items {
+  cursor: pointer;
+  font-weight: var(--font-bold);
+}
+
+.work__item:hover {
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.work__container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875rem;
+}
+
+.work__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.work__mask {
+  background: #6c6ce5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.work__card:hover .work__mask {
+  opacity: 0.9;
+}
+.work__category {
+  color: #fff;
+  background-color: var(--first-color);
+  border-bottom-left-radius: 0.98rem;
+  border-bottom-right-radius: 0.98rem;
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  font-size: var(--small-font-size);
+  display: inline-block;
+  padding: 0.19rem 0.625rem;
+  transform: translateY(0);
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.work__card:hover .work__category {
+  opacity: 1;
+}
+.work__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+  min-height: 500px;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Add this to establish a positioning context */
+}
+
+.no-items-message {
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+  text-align: center;
+  width: 100%;
+  padding: 20px; /* Add some padding for better visibility */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Add a semi-transparent background */
+  z-index: 1; /* Ensure it's above other content */
+}
+
+/* Ensure other items don't overlap with the message when present */
+.work__card {
+  position: relative;
+  z-index: 0;
+}
+
+.work__title {
+  color: #fff;
+  font-size: var(--h3-font-size);
+  margin: 0 0 0.98rem;
+  padding: 0 1.25rem;
+  position: absolute;
+  top: 3.75rem;
+  transform: translateY(-30px);
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.work__button {
+  color: #fff;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: var(--h3-font-size);
+  display: block;
+  background-color: #ffd15c;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.work__card:hover .work__button {
+  opacity: 1;
+}
+
+.work__card:hover .work__mask {
+  opacity: 1;
+}
+
+.work__card:hover .work__title,
+.work__card:hover .work__category {
+  opacity: 1;
+  transform: translateY(0);
+}

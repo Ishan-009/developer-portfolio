@@ -124,14 +124,16 @@ img {
   margin-bottom: 3.75rem;
 }
 
-.section__title {
+.section__title::before {
   content: '';
-  background-color: var(--first-color);
-  height: 2.25rem;
-  width: 2.25rem;
+  background: url(./assets/dots-bg.svg);
+
   position: absolute;
   left: -0.0875rem;
   top: -0.0875rem;
+  height: 2.25rem;
+  width: 2.25rem;
+  opacity: 0.5;
 }
 
 .btn {
