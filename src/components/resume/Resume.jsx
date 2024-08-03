@@ -3,7 +3,7 @@ import Data from './Data';
 import './resume.css';
 function Resume() {
   return (
-    <section className="resume container section" id="resume">
+    <section className="resume container section" id="experience">
       <h2 className="section__title">Experience</h2>
 
       <div className="resume__container grid">

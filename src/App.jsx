@@ -9,22 +9,25 @@ import Resume from './components/resume/Resume';
 import Services from './components/services/Services';
 import Sidebar from './components/sidebar/Sidebar';
 import Testionmonials from './components/testimonials/Testionmonials';
+import { ThemeProvider } from './context/ThemeProvider';
 function App() {
   return (
-    <div>
-      <Sidebar></Sidebar>
-      <main className="main">
-        <Home></Home>
-        <About></About>
-        <Services></Services>
-        <Resume></Resume>
-        <Portfolio></Portfolio>
-        <Pricing></Pricing>
-        <Contact></Contact>
-        <Testionmonials></Testionmonials>
-        <Blogs></Blogs>
-      </main>
-    </div>
+    <ThemeProvider>
+      <div>
+        <Sidebar></Sidebar>
+        <main className="main">
+          <Home></Home>
+          <About></About>
+          <Services></Services>
+          <Resume></Resume>
+          <Portfolio></Portfolio>
+          <Pricing></Pricing>
+          <Testionmonials></Testionmonials>
+          <Blogs></Blogs>
+          <Contact></Contact>
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 

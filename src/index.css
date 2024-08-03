@@ -1,18 +1,32 @@
-/* Google Fonts Setup */
+/* index.css */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-/* Variables CSS */
-/* Colors  */
-
 :root {
+  /* Light mode colors */
   --first-color: hsl(353, 100%, 65%);
-  --title-color: hsl(244, 24%, 26%);
-  --text-color: hsl(244, 16%, 43%);
+  --hover-color: hsl(353, 100%, 65%);
+  --title-color: #454360;
+  --text-color: #353535;
   --body-color: hsl(258, 60%, 98%);
   --container-color: #fff;
+  --header-bg: #f9f9fe;
+  --header-border: #e5e5e5;
+  --header-shadow: rgba(0, 0, 0, 0.1);
+  --about-bg: #fff;
+
+  /* Dark mode colors */
+  --hover-color-dark: #ffd15c;
+  --title-color-dark: hsl(0, 0%, 100%);
+  --text-color-dark: hsl(0, 0%, 100%);
+  --body-color-dark: #353353;
+  --container-color-dark: #302f4e;
+  --header-bg-dark: #353353;
+  --header-border-dark: hsla(0, 0%, 100%, 0.1);
+  --header-shadow-dark: rgba(0, 0, 0, 0.2);
+  --about-bg-dark: #302f4e;
+  --experience-bg-dark: #302f4e;
 
   /* Font and Typography */
-  /* .5rem  | 1rem = 16px*/
   --body-font: 'Rubik', sans-serif;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
@@ -32,7 +46,22 @@
   /* Border Radius */
   --border-radius: 20px;
 }
-/* Respnsive Typography */
+
+/* Dark mode class */
+.dark-mode {
+  --title-color: var(--title-color-dark);
+  --text-color: var(--text-color-dark);
+  --body-color: var(--body-color-dark);
+  --container-color: var(--container-color-dark);
+  --header-bg: var(--header-bg-dark);
+  --header-border: var(--header-border-dark);
+  --header-shadow: var(--header-shadow-dark);
+  --hover-color: var(--hover-color-dark);
+  --about-bg: var(--about-bg-dark);
+  --experience-bg: var(--experience-bg-dark);
+}
+
+/* Responsive Typography */
 @media screen and (max-width: 1024px) {
   :root {
     --h1-font-size: 1.75rem;
@@ -44,7 +73,7 @@
   }
 }
 
-/* Base  */
+/* Base */
 * {
   margin: 0;
   padding: 0;
@@ -97,8 +126,7 @@ img {
   vertical-align: middle;
 }
 
-/* Resusable CSS */
-
+/* Reusable CSS */
 .container {
   max-width: 1080px;
   padding-left: 15px;
@@ -127,7 +155,6 @@ img {
 .section__title::before {
   content: '';
   background: url(./assets/dots-bg.svg);
-
   position: absolute;
   left: -0.0875rem;
   top: -0.0875rem;
@@ -156,6 +183,31 @@ img {
     transform: scale(1);
   }
 }
+
 .btn:hover {
   animation: button-push 0.3s linear 1;
+}
+
+/* Theme toggle styles */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--first-color);
+}
+
+/* Transition styles */
+body,
+.header,
+.nav__link,
+.nav__logo,
+.nav__toggle span {
+  transition: all 0.3s ease;
 }

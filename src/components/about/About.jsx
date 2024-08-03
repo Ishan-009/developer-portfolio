@@ -14,9 +14,11 @@ function About() {
               passionate about building software applications and custom
               solutions to the problems of the world.
             </p>
-            <a href="" className="btn">
-              Download CV
-            </a>
+            <div className="resume-btn-div">
+              <a href="" className="resume-btn btn">
+                Download CV
+              </a>
+            </div>
           </div>
           <div className="about__skills grid">
             <div className="skills__data">
