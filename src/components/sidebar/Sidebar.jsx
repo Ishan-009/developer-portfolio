@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import './sidebar.css';
 
@@ -75,20 +75,36 @@ const SideBar = () => {
 
         <div className={`nav__menu ${isMenuOpen ? 'show-menu' : ''}`}>
           <ul className="nav__list">
-            {[
-              'home',
-              'about',
-              'services',
-              'experience',
-              'portfolio',
-              'contact',
-            ].map((item) => (
-              <li key={item} className="nav__item">
-                <a href={`#${item}`} className="nav__link" onClick={closeMenu}>
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </a>
-              </li>
-            ))}
+            <li className="nav__item">
+              <a href="#home" className="nav__link" onClick="closeMenu()">
+                Home
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#about" className="nav__link" onClick="closeMenu()">
+                About
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#skills" className="nav__link" onClick="closeMenu()">
+                Skills
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#experience" className="nav__link" onClick="closeMenu()">
+                Experience
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#portfolio" className="nav__link" onClick="closeMenu()">
+                Portfolio
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#contact" className="nav__link" onClick="closeMenu()">
+                Contact
+              </a>
+            </li>
           </ul>
           <button
             className="nav__close"

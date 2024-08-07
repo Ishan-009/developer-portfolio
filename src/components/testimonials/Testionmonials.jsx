@@ -12,24 +12,24 @@ const data = [
   {
     id: 1,
     image: Image1,
-    title: 'John Doe',
-    subtitle: 'Product designer at Dribble',
+    title: 'Aadil Rayees',
+    subtitle: 'Software Developer @ByteWeb',
     comment:
-      'I enjoy working with the theme and learn so much. You       guys make the process fun and interesting. Good luck! 👍',
+      'Demonstrates exceptional ability to grasp complex software development tasks and consistently delivers high-quality results with remarkable efficiency. A quick learner who translates intricate requirements into practical solutions, driving projects forward with skill and precision.',
   },
   {
     id: 2,
     image: Image3,
-    title: 'John Doe',
-    subtitle: 'Product designer at Dribble',
+    title: 'Developer @ByteWeb IT Solutions',
+    subtitle: 'Yogesh Patel',
     comment:
-      'I enjoy working with the theme and learn so much. You       guys make the process fun and interesting. Good luck! 👍',
+      'A standout Laravel developer who swiftly modernized our legacy system while managing multiple projects. Demonstrates software development expertise, rapid learning, and innovative problem-solving. Consistently delivers high-quality solutions that exceed expectations, making them an invaluable asset to any development team.',
   },
 ];
 function Testionmonials() {
   return (
     <section className="testimonials container section">
-      <h2 className="section__title">Client & Reviews</h2>
+      <h2 className="section__title">Professional Endorsements</h2>
       <Swiper
         modules={[Pagination]}
         spaceBetween={50}

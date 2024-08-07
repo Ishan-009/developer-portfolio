@@ -70,18 +70,18 @@
   background-color: var(--first-color);
 }
 
-.development {
-  width: 90%;
+.frontend {
+  width: 70%;
   background-color: rgb(255, 209, 92);
 }
 
-.ui-ux {
-  width: 80%;
+.backend {
+  width: 85%;
   background-color: rgb(255, 76, 96);
 }
 
-.photography {
-  width: 60%;
+.devops-cloud {
+  width: 70%;
   background-color: rgb(108, 108, 299);
 }
 

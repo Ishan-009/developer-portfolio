@@ -4,7 +4,7 @@ function AboutBox() {
       <div className="about__box">
         <i className="about__icon icon-fire"></i>
         <div>
-          <h3 className="about__title">198</h3>
+          <h3 className="about__title">15</h3>
           <span className="about__subtitle">Project Completed</span>
         </div>
       </div>

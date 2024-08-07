@@ -1,10 +1,3 @@
-:root {
-  --h3-font-size: 1.5rem;
-  --text-color: #333;
-  --container-color: #fff;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
 .contact.section {
   padding: 4rem 1rem 6.25rem;
 }
@@ -35,8 +28,6 @@
   padding: 0.625rem 1.875rem;
   border: none;
   outline: none;
-  background-color: var(--container-color);
-  color: var(--text-color);
   border-radius: 1.875rem;
   box-shadow: var(--shadow);
   font-size: 1rem;

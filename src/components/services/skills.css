@@ -21,17 +21,20 @@
 }
 
 .services__card:nth-child(2) {
-  background-color: rgb(249, 215, 76);
+  background-color: rgb(249, 123, 139);
   box-shadow: 0 5px 20px 0px rgb(249, 215, 76/ 50%);
 }
 
 .services__card:nth-child(3) {
-  background-color: rgb(249, 123, 139);
+  background-color: rgb(249, 215, 76);
   box-shadow: 0 5px 20px 0px rgb(249, 215, 76/ 50%);
 }
 
 .services__img {
   margin-bottom: 1.25rem;
+  width: 8rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .services__title {

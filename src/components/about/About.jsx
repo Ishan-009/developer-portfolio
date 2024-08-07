@@ -10,9 +10,10 @@ function About() {
         <div className="about__data grid">
           <div className="about__info">
             <p className="about__description">
-              I am Ishan Moorjmalani, Software Engineer from India. I am
-              passionate about building software applications and custom
-              solutions to the problems of the world.
+              I'm Ishan Moorjmalani, a Full-Stack Software Engineer from India
+              passionate about building innovative digital solutions. I
+              specialize in transforming complex requirements into efficient,
+              scalable applications.
             </p>
             <div className="resume-btn-div">
               <a href="" className="resume-btn btn">
@@ -23,29 +24,29 @@ function About() {
           <div className="about__skills grid">
             <div className="skills__data">
               <div className="skills_titles">
-                <div className="skills__name">Development</div>
-                <span className="skills__number ">90%</span>
+                <div className="skills__name">Frontend Development</div>
+                <span className="skills__number ">70%</span>
               </div>
               <div className="skills__bar ">
-                <span className="skills__percentage development"></span>
+                <span className="skills__percentage frontend"></span>
               </div>
             </div>
             <div className="skills__data">
               <div className="skills_titles">
-                <div className="skills__name">UI/UX Design</div>
+                <div className="skills__name">Backend Development</div>
+                <span className="skills__number ">85%</span>
+              </div>
+              <div className="skills__bar">
+                <span className="skills__percentage backend"></span>
+              </div>
+            </div>
+            <div className="skills__data">
+              <div className="skills_titles">
+                <div className="skills__name">Devops and Cloud</div>
                 <span className="skills__number ">70%</span>
               </div>
               <div className="skills__bar">
-                <span className="skills__percentage ui-ux"></span>
-              </div>
-            </div>
-            <div className="skills__data">
-              <div className="skills_titles">
-                <div className="skills__name">Photography</div>
-                <span className="skills__number ">60%</span>
-              </div>
-              <div className="skills__bar">
-                <span className="skills__percentage photography"></span>
+                <span className="skills__percentage devops-cloud"></span>
               </div>
             </div>
           </div>
