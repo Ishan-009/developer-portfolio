@@ -93,17 +93,46 @@
 
 .about__box {
   display: flex;
-  column-gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--container-color);
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about__box:hover {
+  transform: translateY(-5px);
 }
 
 .about__icon {
-  font-size: var(--h1-font-size);
-  color: #dedeea;
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.about__box:hover .about__icon {
+  transform: scale(1.1);
+}
+
+.about__info {
+  display: flex;
+  flex-direction: column;
 }
 
 .about__title {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--title-color);
+  margin-bottom: 0.25rem;
 }
+
+.about__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
 .resume-btn-div {
   display: flex;
   justify-content: center;
@@ -139,9 +168,15 @@
   }
 
   .about__box {
-    flex-direction: column;
-    row-gap: 0.5rem;
-    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .about__icon {
+    font-size: 1.75rem;
+  }
+
+  .about__title {
+    font-size: 1.5rem;
   }
 }
 
@@ -165,63 +200,8 @@
   }
 
   .about__boxes {
-    grid-template-columns: repeat(2, 150px);
-    row-gap: 1.5rem;
-    justify-content: center;
-  }
-}
-
-/* Existing styles remain the same */
-
-@media screen and (max-width: 1024px) {
-  .about__container {
-    grid-template-columns: 720px;
-    justify-content: center;
-    row-gap: 1.875rem;
-  }
-
-  .about__data::before {
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #fff;
-    left: 49%;
-    top: -20px;
-  }
-
-  .about__img {
-    justify-self: center;
-  }
-
-  .about__box {
-    flex-direction: column;
-    row-gap: 0.5rem;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .about__container {
-    grid-template-columns: 350px;
-    row-gap: 2.5rem;
-  }
-
-  .about__data {
-    grid-template-columns: 1fr;
-    row-gap: 1.875rem;
-  }
-
-  .about__data::before {
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #fff;
-    left: 47%;
-    top: -20px;
-  }
-
-  .about__boxes {
-    grid-template-columns: repeat(2, 150px);
-    row-gap: 1.5rem;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 
@@ -250,6 +230,10 @@
 
   .skills__titles {
     font-size: 0.85rem;
+  }
+
+  .about__box {
+    padding: 1rem;
   }
 }
 
@@ -298,4 +282,11 @@
   .about__boxes {
     grid-template-columns: 1fr;
   }
+}
+
+.fa-code,
+.fa-code-branch {
+  font-weight: 100; /* Makes icons thinner */
+  font-size: 1.7em;
+  opacity: 0.9; /* Makes them slightly lighter */
 }

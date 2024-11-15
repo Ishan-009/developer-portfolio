@@ -26,7 +26,7 @@
 }
 
 .services__card:nth-child(3) {
-  background-color: rgb(249, 215, 76);
+  background-color: rgb(255, 155, 56);
   box-shadow: 0 5px 20px 0px rgb(249, 215, 76/ 50%);
 }
 
@@ -40,18 +40,10 @@
 .services__title {
   font-size: var(--h3-font-size);
   margin-bottom: 1rem;
-  color: #fff;
-}
-
-.services__description {
-  color: var(--text-color);
-}
-
-.services__card:nth-child(2) .services__title {
   color: var(--title-color);
 }
 
-.services__card:nth-child(2) .services__description {
+.services__description {
   color: var(--text-color);
 }
 

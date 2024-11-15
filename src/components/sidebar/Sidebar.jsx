@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import './sidebar.css';
+import Resume from '../about/Resume';
 
 const MenuIcon = () => (
   <svg
@@ -90,11 +91,7 @@ const SideBar = () => {
                 Skills
               </a>
             </li>
-            <li className="nav__item">
-              <a href="#experience" className="nav__link" onClick="closeMenu()">
-                Experience
-              </a>
-            </li>
+
             <li className="nav__item">
               <a href="#portfolio" className="nav__link" onClick="closeMenu()">
                 Portfolio
@@ -104,6 +101,12 @@ const SideBar = () => {
               <a href="#contact" className="nav__link" onClick="closeMenu()">
                 Contact
               </a>
+            </li>
+            <li className="nav__item">
+              <Resume
+                text={null}
+                icon={<i className="fa-solid fa-download download-resume"></i>}
+              />
             </li>
           </ul>
           <button

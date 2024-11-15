@@ -22,6 +22,13 @@ function HeaderSocials() {
       >
         <i className="fa-brands fa-twitter"></i>
       </a>
+      <a
+        target="_blank"
+        href="mailto:ishanmoorjmalani009@gmail.com"
+        className="home__socials-links"
+      >
+        <i className="fa-solid fa-envelope"></i>
+      </a>
       {/* <a target="_blank" href="" className="home__socials-links">
         <i className="fa-brands fa-instagram"></i>
       </a> */}

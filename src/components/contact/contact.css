@@ -1,5 +1,6 @@
 .contact.section {
-  padding: 4rem 1rem 6.25rem;
+  padding: 6rem 1rem;
+  position: relative;
 }
 
 .contact__container {
@@ -7,11 +8,131 @@
   gap: 1.875rem;
 }
 
+/* Social Links Styles */
+.social-links-container {
+  margin: 3rem auto 4rem;
+  text-align: center;
+  max-width: 800px;
+}
+
+.social-links-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.social-link-item {
+  position: relative;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background: var(--container-color);
+  border: 1px solid var(--header-border);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-link i {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  transition: all 0.3s ease;
+}
+
+.social-tooltip {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--first-color);
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px;
+  border-style: solid;
+  border-color: var(--first-color) transparent transparent transparent;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+}
+
+.social-link:hover .social-tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.social-link.linkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+  box-shadow: 0 5px 15px rgba(0, 119, 181, 0.2);
+}
+
+.social-link.github:hover {
+  background: #333;
+  border-color: #333;
+  box-shadow: 0 5px 15px rgba(51, 51, 51, 0.2);
+}
+
+.social-link.twitter:hover {
+  background: #1da1f2;
+  border-color: #1da1f2;
+  box-shadow: 0 5px 15px rgba(29, 161, 242, 0.2);
+}
+
+.social-link.email:hover {
+  background: #ea4335;
+  border-color: #ea4335;
+  box-shadow: 0 5px 15px rgba(234, 67, 53, 0.2);
+}
+
+.social-link:hover i {
+  color: #ffffff !important;
+}
+
+/* Contact Info Styles */
 .contact__title {
   font-size: var(--h3-font-size);
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+.contact__title-icon {
+  font-size: 1.25rem;
+}
+
+.contact__details {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+/* Form Styles */
 .contact__form-group {
   display: grid;
   gap: 1.5rem;
@@ -28,10 +149,11 @@
   padding: 0.625rem 1.875rem;
   border: none;
   outline: none;
+  background: #fff;
   border-radius: 1.875rem;
   box-shadow: var(--shadow);
   font-size: 1rem;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact__form-input:focus {
@@ -47,10 +169,34 @@
   height: 100%;
 }
 
+/* Button Styles */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  border-radius: 1.875rem;
+  background: var(--first-color);
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--first-color-alt);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
 @media screen and (min-width: 1024px) {
   .contact__container {
     grid-template-columns: 1fr 2fr;
-    justify-content: center;
+    align-items: start;
   }
 
   .contact__form-group {
@@ -60,12 +206,8 @@
 
 @media screen and (max-width: 768px) {
   .contact__container {
-    grid-template-columns: 310px;
-    row-gap: 1.875rem;
-  }
-
-  .contact__form-group {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .contact__info {
@@ -74,7 +216,459 @@
 }
 
 @media screen and (max-width: 350px) {
-  .contact__container {
+  .social-links-grid {
+    gap: 1rem;
+  }
+
+  .social-link {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .social-link i {
+    font-size: 1.25rem;
+  }
+}
+
+/* Responsive adjustments for phone numbers */
+@media screen and (max-width: 480px) {
+  .quick-contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Quick Contact Styles */
+.quick-contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.quick-contact__card {
+  background: var(--container-color);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quick-contact__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quick-contact__icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background: var(--first-color-lighter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-contact__icon-box i {
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+.quick-contact__content {
+  flex: 1;
+}
+
+.quick-contact__content h3 {
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.quick-contact__content p {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  word-break: break-all;
+}
+
+.quick-contact__copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--first-color);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-contact__copy-btn:hover {
+  background: var(--first-color);
+  color: var(--container-color);
+}
+
+.quick-contact__copy-btn i {
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .quick-contact {
     grid-template-columns: 1fr;
   }
+
+  .quick-contact__card {
+    padding: 1.5rem;
+  }
+}
+
+.quick-contact__schedule-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--first-color);
+  color: #fff;
+  border-radius: 8px;
+  font-size: var(--small-font-size);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.quick-contact__schedule-btn:hover {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+}
+
+.dark-mode .quick-contact__schedule-btn:hover {
+  background: linear-gradient(135deg, #ffd15c, #ffe291);
+  box-shadow: 0 5px 15px rgba(255, 209, 92, 0.2);
+}
+
+.quick-contact__card.calendar {
+  background: var(--first-color-lighter);
+}
+
+.contact__response-time {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 3rem auto;
+  padding: 1rem;
+  background: var(--container-color);
+  border-radius: 12px;
+  max-width: 400px;
+}
+
+.contact__response-time i {
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.contact__response-time span {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+}
+
+/* Optional: Add subtle hover effect */
+.contact__response-time {
+  transition: transform 0.3s ease;
+}
+
+.contact__response-time:hover {
+  transform: translateY(-2px);
+}
+
+.quick-contact__actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.quick-contact__email-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: var(--first-color);
+  color: #fff;
+  font-size: var(--small-font-size);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.quick-contact__email-btn:hover {
+  background: var(--first-color-dark);
+  transform: translateY(-2px);
+}
+
+.quick-contact__value {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+
+.quick-contact__subtext {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 0.5rem;
+}
+
+/* Update existing copy button styles */
+.quick-contact__copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--first-color);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-contact__copy-btn:hover {
+  background: var(--first-color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 480px) {
+  .quick-contact__actions {
+    flex-direction: column;
+  }
+}
+
+/* Custom Toast Styles */
+:root {
+  --toastify-color-success: var(--first-color);
+  --toastify-icon-color-success: var(--first-color);
+  --toastify-color-progress-success: var(--first-color);
+}
+
+/* Optional: Style the toast container */
+.Toastify__toast-container {
+  padding: 0;
+}
+
+.Toastify__toast {
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Toastify__toast-body {
+  font-family: var(--body-font);
+  font-size: 0.875rem;
+}
+
+.Toastify__progress-bar {
+  height: 3px;
+}
+
+/* Optional: Add animation for the copy button */
+.quick-contact__copy-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-contact__copy-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.3s ease-out;
+}
+
+.quick-contact__copy-btn:active::after {
+  transform: translate(-50%, -50%) scale(2);
+  transition: transform 0.1s ease-out;
+}
+
+/* Enhanced Social Links Container with improved spacing */
+.social-links-container {
+  margin: 3rem auto 4rem;
+  text-align: center;
+  max-width: 800px;
+}
+
+.social-links__title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Keep the nice title decoration */
+.social-links__title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--first-color);
+  border-radius: 2px;
+}
+
+/* Revert to the previous social links styling */
+.social-links-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.social-link-item {
+  position: relative;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background: var(--container-color);
+  border: 1px solid var(--header-border);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-link i {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  transition: all 0.3s ease;
+}
+
+.social-tooltip {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--first-color);
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px;
+  border-style: solid;
+  border-color: var(--first-color) transparent transparent transparent;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+}
+
+.social-link:hover .social-tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.social-link.linkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+  box-shadow: 0 5px 15px rgba(0, 119, 181, 0.2);
+}
+
+.social-link.github:hover {
+  background: #333;
+  border-color: #333;
+  box-shadow: 0 5px 15px rgba(51, 51, 51, 0.2);
+}
+
+.social-link.twitter:hover {
+  background: #1da1f2;
+  border-color: #1da1f2;
+  box-shadow: 0 5px 15px rgba(29, 161, 242, 0.2);
+}
+
+.social-link.email:hover {
+  background: #ea4335;
+  border-color: #ea4335;
+  box-shadow: 0 5px 15px rgba(234, 67, 53, 0.2);
+}
+
+.social-link:hover i {
+  color: #ffffff !important;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .social-links-grid {
+    gap: 1.5rem;
+  }
+
+  .social-link {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .social-link i {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-links-grid {
+    gap: 1rem;
+  }
+
+  .social-link {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .social-link i {
+    font-size: 1.125rem;
+  }
+}
+
+/* Optional: Add subtle animation to response time */
+.contact__response-time {
+  transition: transform 0.3s ease;
+}
+
+.contact__response-time:hover {
+  transform: translateY(-2px);
 }

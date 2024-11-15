@@ -1,6 +1,9 @@
 import Image from '../../assets/avatar-2.svg';
 import './about.css';
 import AboutBox from './AboutBox';
+
+import Resume from './Resume';
+
 function About() {
   return (
     <section className="about container section" id="about">
@@ -15,11 +18,7 @@ function About() {
               specialize in transforming complex requirements into efficient,
               scalable applications.
             </p>
-            <div className="resume-btn-div">
-              <a href="" className="resume-btn btn">
-                Download CV
-              </a>
-            </div>
+            <Resume text="Download CV" />
           </div>
           <div className="about__skills grid">
             <div className="skills__data">

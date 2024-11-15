@@ -3,11 +3,13 @@
 Task Update 7th August 2024
 == Remaining Tasks
 
-=> Download CV/Resume Functionality
-=> Adding Personal Projects Data to the template
+=> Download CV/Resume Functionality done
 => contact form Functionality
 => Adding about section data like 600+ commits, and maybe taking inspiration from few developer sites for what to add in that section
+=> Quick Contact Info
 =>  adding some links of mine like email or some other socials or something
+=> Subtle Design Changes like color chagnes, font and all.
 
-for sure 90% of the work is done at this point
+
+for sure 95% of the work is done at this point
 

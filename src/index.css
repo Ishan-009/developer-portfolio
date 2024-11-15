@@ -16,6 +16,7 @@
 
   /* Dark mode colors */
   --hover-color-dark: #ffd15c;
+
   --title-color-dark: hsl(0, 0%, 100%);
   --text-color-dark: hsl(0, 0%, 100%);
   --body-color-dark: #353353;
@@ -45,8 +46,12 @@
 
   /* Border Radius */
   --border-radius: 20px;
-}
+  --work-mask: #6d78f2;
+  --work-mask-dark: #7070ec;
 
+  --resume-icon: var(--text-color);
+  --resume-icon-dark: #ffffff;
+}
 /* Dark mode class */
 .dark-mode {
   --title-color: var(--title-color-dark);
@@ -59,8 +64,9 @@
   --hover-color: var(--hover-color-dark);
   --about-bg: var(--about-bg-dark);
   --experience-bg: var(--experience-bg-dark);
+  --work-mask: var(--work-mask-dark);
+  --resume-icon: var(--resume-icon-dark);
 }
-
 /* Responsive Typography */
 @media screen and (max-width: 1024px) {
   :root {

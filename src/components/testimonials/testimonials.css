@@ -63,3 +63,14 @@
   border-radius: 0.25rem !important;
   background-color: #ff6464 !important;
 }
+
+.download-resume {
+  font-size: 1.25rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-resume:hover {
+  color: #ff6464;
+}

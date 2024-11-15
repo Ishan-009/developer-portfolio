@@ -191,3 +191,14 @@
     font-size: 1.5rem;
   }
 }
+.download-resume {
+  color: var(
+    --resume-icon
+  ) !important; /* Same as your --title-color, a deep blue-gray */
+  transition: color 0.3s ease;
+}
+
+.download-resume:hover {
+  color: var(--first-color) !important; /* Your existing pink color */
+  cursor: pointer;
+}

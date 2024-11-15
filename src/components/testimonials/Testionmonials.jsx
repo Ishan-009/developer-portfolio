@@ -23,7 +23,7 @@ const data = [
     title: 'Developer @ByteWeb IT Solutions',
     subtitle: 'Yogesh Patel',
     comment:
-      'A standout Laravel developer who swiftly modernized our legacy system while managing multiple projects. Demonstrates software development expertise, rapid learning, and innovative problem-solving. Consistently delivers high-quality solutions that exceed expectations, making them an invaluable asset to any development team.',
+      'A standout developer who swiftly modernized our legacy system while managing multiple projects. Demonstrates software development expertise, rapid learning, and innovative problem-solving. Consistently delivers high-quality solutions that exceed expectations, making them an invaluable asset to any development team.',
   },
 ];
 function Testionmonials() {
