@@ -12,7 +12,7 @@ function Home() {
         <h1 className="home__name">Ishan Moorjmalani</h1>
         <span className="home__education">I am a Full Stack Developer</span>
         <HeaderSocials />
-        <a href="#contact" className="btn">
+        <a href="#contact" className="btn hire-me-btn">
           Hire Me
         </a>
         <Scrolldown></Scrolldown>

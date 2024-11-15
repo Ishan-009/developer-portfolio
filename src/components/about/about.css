@@ -148,6 +148,11 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.resume-btn:hover {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e) !important;
+}
+
 @media screen and (max-width: 1024px) {
   .about__container {
     grid-template-columns: 720px;

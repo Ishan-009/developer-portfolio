@@ -44,6 +44,15 @@
   color: hsl(43, 100%, 68%);
 }
 
+.hire-me-btn {
+  background-color: var(--first-color);
+  color: var(--text-color);
+}
+
+.hire-me-btn:hover {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+}
+
 .scroll__down {
   position: absolute;
   bottom: 2.5rem;
