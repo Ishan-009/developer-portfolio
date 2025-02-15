@@ -1,4 +1,4 @@
-import ResumePDF from '../../assets/Ishan_s_Resume_2024.pdf';
+import ResumePDF from '../../assets/Ishan-Resume.pdf';
 function Resume({ text = null, icon = null }) {
   const handleDownloadCV = () => {
     // Create a temporary link
